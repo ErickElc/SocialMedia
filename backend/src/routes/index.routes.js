@@ -6,16 +6,13 @@ const routerComments = require("./comments.routes.js");
 
 const routes = (app) => {
   app.use(
-    "/api",
+    "/api/v1",
     express.urlencoded({ extended: false }),
     router,
     routerPosts,
     routerComments
   );
-  app.use("/auth", express.urlencoded({ extended: false }), routerAdmin);
-  app.use("/", (req, res) => {
-    res.status(200).send("Bem vindo há api!");
-  });
+  app.use("/auth/v2", express.urlencoded({ extended: false }), routerAdmin);
 };
 
 module.exports = routes;

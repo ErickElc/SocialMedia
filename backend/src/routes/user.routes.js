@@ -6,9 +6,6 @@ const userController = require("../controllers/UserController");
 const router = express.Router();
 
 router
-  .get("/", (req, res) => {
-    res.status(200).send("Bem vindo há api!");
-  })
   .get("/users/all", userController.listAllUsers) //RF (13) // RF(04)
   .get("/users/:id", userController.listOneUser) // RF (04)
   .post("/users/list/email", userController.listOneEmail) // RF(04)
