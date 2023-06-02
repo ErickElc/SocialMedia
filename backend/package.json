@@ -2,14 +2,14 @@
   "name": "socialmediav2",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "engines": {
     "node": "19.x"
   },
   "scripts": {
     "test": "jest ./src/tests  --verbose ",
-    "dev": "nodemon app.js",
-    "start": "node app.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "swagger-autogen": "node swagger.js"
   },
   "keywords": [],
